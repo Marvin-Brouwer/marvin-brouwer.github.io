@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Page not found</title>
+	<meta name="robots" content="noindex">
+	<script>
+		// GitHub Pages serves this page for every path that doesn't exist, including the old
+		// rooted docs pages under /rooted/. Send those to the same page on the new site.
+		if (location.pathname === '/rooted' || location.pathname.startsWith('/rooted/')) {
+			const rest = location.pathname.slice('/rooted'.length).replace(/^\//, '')
+			location.replace('https://rooted-org.github.io/rooted/' + rest + location.search + location.hash)
+		}
+	</script>
+</head>
+<body>
+	<p>Page not found.</p>
+	<p>Looking for rooted? It moved to <a href="https://rooted-org.github.io/rooted/">rooted-org.github.io/rooted</a>.</p>
+</body>
+</html>
